@@ -1,4 +1,4 @@
-print(100)#整数（int）2
+print(100)#整数（int）
 print(3.14)#浮点数（float）
 print(True)#布尔值（bool）
 print(False)#布尔值（bool）
