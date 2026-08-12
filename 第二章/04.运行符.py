@@ -50,3 +50,51 @@ weight = float(input("请输入你的体重（千克）："))
 bmi = weight / (height ** 2)
 print(f"你的BMI指数是：{bmi}")
 print("------------------------------\n")
+
+# 赋值运算符：= += -= *= /= //= %= **=
+num = 85
+
+num += 10 # num = num + 10
+print("num += 10 ---> num=", num) # 95
+
+num -= 10 # num = num - 10
+print("num -= 10 ---> num=", num) # 85
+
+num *= 10 # num = num * 10
+print("num *= 10 ---> num=", num) # 850
+
+num /= 10 # num = num / 10
+print("num /= 10 ---> num=", num) # 85.0
+
+num //= 10 # num = num // 10
+print("num //= 10 ---> num=", num) # 8.0
+
+num %= 3 # num = num % 3
+print("num %= 3 ---> num=", num) # 2.0
+
+num **= 3 # num = num ** 3
+print("num **= 3 ---> num=", num) # 8.0
+print("------------------------------\n")
+
+# 比较运算符：== != > < >= <=
+print("100 == 100 吗?", 100 == 100) # True
+print("'100' == '100' 吗?", '100' == '100') # True
+print("100 != 100 吗?", 100 != 100) # False
+
+print("100 < 100 吗?", 100 < 100) # False
+print("100 <= 100 吗?", 100 <= 100) # True
+
+print("100 > 100 吗?", 100 > 100) # False
+print("100 >= 100 吗?", 100 >= 100) # True
+print("------------------------------\n")
+
+# 逻辑运算符：and or not
+# 案例1：键盘输入一个整数，判断这个整数在不在10-20 之间 ---> 在：True，不在：False
+num = int(input("请输入一个整数："))
+print("这个整数在10-20之间吗？", num >= 10 and num <=20)
+print("这个整数在10-20之间吗？", 10 <= num <= 20)
+
+# 案例2：键盘输入一个整数，判断这个整数是否不在10-20 之间 ---> 在：True，不在：False
+num = int(input("请输入一个整数："))
+print("这个整数不在10-20之间吗？", num < 10 or num > 20)
+print("这个整数不在10-20之间吗？", not (10 <= num <= 20))
