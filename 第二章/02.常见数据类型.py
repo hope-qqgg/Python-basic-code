@@ -8,14 +8,14 @@ print(type("Hello World"))  # str
 print(type(None))  # NoneType
 num = 111
 print(type(num))  # int
-print("------------------------------\n")
+print("------------------------------")
 
 # 常见的数据类型 ---> isinstance()判断指定字面量或变量是否是指定类型，如果是返回True，否则返回False
 print(isinstance(num, int))  # True
 print(isinstance(num, bool))  # False
 print(isinstance(num, float))  # False
 print(isinstance(num, str))  # False
-print("------------------------------\n")
+print("------------------------------")
 
 # 字符串
 # 定义字符串的三种方式
@@ -34,7 +34,7 @@ print(s3)
 print(type(s1))
 print(type(s2))
 print(type(s3))
-print("------------------------------\n")
+print("------------------------------")
 
 # 定义字符---> It's very good
 # 转义字符\' \" \n \t
@@ -52,7 +52,7 @@ print(msg4)
 
 msg5 = "hello:\n\t你好世界\n\tHello Python" # \n 换行 \t 制表符
 print(msg5)
-print("------------------------------\n")
+print("------------------------------")
 
 # 字符串操作
 s1 = "永远有多远""，野生狗奶"
@@ -69,7 +69,7 @@ pro = "计算机应用技术"
 hoppy = "Java、Python、C++"
 message = "姓名：" + name + "，年龄：" + str(age) + "岁，专业：" + pro + "，爱好：" + hoppy
 print(message)
-print("------------------------------\n")
+print("------------------------------")
 
 # 字符串格式化 ---> 方法一：%s 占位符
 name = "HOPE"
