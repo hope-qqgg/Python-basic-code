@@ -105,7 +105,7 @@ print(f"合并后的列表{num_list1}")
 
 # 2.去除重复元素
 num_list = [] # 记录去除重复元素的新列表
-for num in num_list1:
+for num in num_list1 + num_list2:
     if num not in num_list: # 判断 num是否在 num_list中，不在就加到新列表 num_list中
         num_list.append(num)
 print(f"去除重复元素的新列表{num_list}")
@@ -117,7 +117,7 @@ print(f"合并后的列表{new_list}")
 
 # 2.去除重复元素
 num_list = [] # 记录去除重复元素的新列表
-for num in num_list1:
+for num in num_list1 + num_list2:
     if num not in num_list: # 判断 num是否在 num_list中，不在就加到新列表 num_list中
         num_list.append(num)
 print(f"去除重复元素的新列表{num_list}")
@@ -129,7 +129,7 @@ print(f"合并后的列表{new_list}")
 
 # 2.去除重复元素
 num_list = [] # 记录去除重复元素的新列表
-for num in num_list1:
+for num in num_list1 + num_list2:
     if num not in num_list: # 判断 num是否在 num_list中，不在就加到新列表 num_list中
         num_list.append(num)
 print(f"去除重复元素的新列表{num_list}")
