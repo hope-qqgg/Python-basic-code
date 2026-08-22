@@ -18,9 +18,22 @@
 
 提示：
 2 <= nums.length <= 10^4
--109 <= nums[i] <= 10^9
--109 <= target <= 10^9
+-10^9 <= nums[i] <= 10^9
+-10^9 <= target <= 10^9
 只会存在一个有效答案
 
-进阶：你可以想出一个时间复杂度小于 O(n2) 的算法吗？
+进阶：你可以想出一个时间复杂度小于 O(n²) 的算法吗？
 """
+# 解法一（暴力解法，时间复杂度 O(n²)）：
+def twe_sum(nums,target):
+    # 获取列表nums的长度
+    n = len(nums)
+    for i in range(n): # 第一次遍历
+        for j in range(i + 1,n): # 第二次遍历
+            if nums[i] + nums[j] == target:
+                return [i,j]
+    return []
+
+nums = [2,7,11,15]
+target = 9
+print(twe_sum(nums,target))
