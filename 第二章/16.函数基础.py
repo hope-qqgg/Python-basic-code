@@ -118,5 +118,5 @@ def processing_list(new_liet):
     list_max = max(new_liet)
     list_min = min(new_liet)
     list_avg = round(sum(new_liet) / len(new_liet),1)
-    return print(f"最高分：{list_max}、最低分：{list_min}、平均分：{list_avg}")
+    return print(f"最高分：{list_max}、\n最低分：{list_min}、\n平均分：{list_avg}")
 processing_list([690,588,700,300,343,490])
