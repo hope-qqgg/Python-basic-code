@@ -25,7 +25,4 @@
 # 方法一（int 转 str）：
 def palindrome(num):
     num_text = str(num)
-    if num_text == num_text[::-1]:
-        return True
-    else:
-        return False
+    return num_text == num_text[::-1]
