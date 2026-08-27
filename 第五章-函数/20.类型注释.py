@@ -44,7 +44,7 @@ def circle_len(r:float) -> tuple[float, float]:
 al = circle_len(8.5)
 print(al)
 
-def calc_order_cost(*args:tuple[str, float, int],coupon=0,score=0,express=0) ->float:
+def calc_order_cost(*args:tuple[str, float, int],coupon=0,score=0,express=0) -> float:
     """
     根据传入的一批商品信息（商品名、价格、数量）、优惠（优惠券、积分抵扣）、运费信息计算订单的总金额
     :param args: 商品信息（商品名、价格、数量）

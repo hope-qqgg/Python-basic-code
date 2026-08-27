@@ -48,3 +48,25 @@ s 仅含字符 ('I', 'V', 'X', 'L', 'C', 'D', 'M')
 IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
 关于罗马数字的详尽书写规则，可以参考 罗马数字 - 百度百科。
 """
+def roman_to_int(s: str) -> int:
+    values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
+    total = 0
+    prev = 0
+    # 从右向左遍历
+    for ch in reversed(s):
+        curr = values[ch]
+        if curr < prev:
+            total -= curr   # 当前值小于前一个（右侧）值，做减法
+        else:
+            total += curr
+        prev = curr
+    return total
