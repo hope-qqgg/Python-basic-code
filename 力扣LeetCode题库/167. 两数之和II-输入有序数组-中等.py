@@ -40,3 +40,21 @@ def twe_sum3(nums,target):
     return []
 
 # 唯一解 双指针
+def twe_sum1(numbers,target):
+    left = 0
+    right = len(numbers) - 1
+    while not left == right:
+        twe_sum = numbers[left] + numbers[right]
+        if twe_sum == target:
+            return [left + 1,right + 1]
+        elif twe_sum > target:
+            right -= 1
+        elif twe_sum < target:
+            left += 1
+
+# 测试
+print(twe_sum1(numbers = [2,7,11,15],target = 9))
+
+print(twe_sum1(numbers = [2,3,4],target = 6))
+
+print(twe_sum1(numbers = [-1,0], target = -1))
