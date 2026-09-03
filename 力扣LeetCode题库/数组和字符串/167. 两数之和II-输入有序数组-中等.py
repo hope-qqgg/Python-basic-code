@@ -39,7 +39,7 @@ def twe_sum3(nums,target):
             cache[item] = i
     return []
 
-# 唯一解 双指针
+# 唯一解 双指针 - 相向指针
 def twe_sum1(numbers,target):
     left = 0
     right = len(numbers) - 1
