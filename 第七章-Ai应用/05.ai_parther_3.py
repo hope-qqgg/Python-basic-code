@@ -42,7 +42,7 @@ if 'messages' not in st.session_state:
     st.session_state.messages = []
 
 # 昵称
-if 'nickname' not in st.session_state:
+if 'nick_name' not in st.session_state:
     st.session_state.nick_name = "宵宫"
 # 性格
 if 'description' not in st.session_state:
