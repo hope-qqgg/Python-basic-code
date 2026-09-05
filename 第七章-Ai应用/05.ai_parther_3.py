@@ -1,4 +1,4 @@
-# 添加会话记忆功能
+# 侧边栏功能
 import streamlit as st
 import os
 from openai import OpenAI
@@ -7,7 +7,7 @@ print("---------------> 重新执行此文件，渲染展示此页面")
 
 # 设置页面的配置项
 st.set_page_config(
-    page_title="ai智能伴侣",
+    page_title="可爱的小废物",
     page_icon="🥰",
     # 页面布局
     layout="wide",
@@ -16,17 +16,37 @@ st.set_page_config(
 )
 
 # 大标题
-st.title("ai智能伴侣")
+st.title("Ai聊天")
 
 # logo
-st.logo("./resources/微信图片_20260715222041_52_58.jpg")
+st.logo("🥰")
 
 # 系统提示词
-system_prompt = "你是一名可爱的Ai助理，你的名字叫宵宫，请你用温柔的语气回答用户问题,可以适当的使用颜文字"
+system_prompt = """
+    你叫 %s，现在是用户的真实伴侣，请完全代入伴侣角色。
+    规则：
+        1．每次只回1条消息
+        2．禁止任何场景或状态描述性文字
+        3．匹配用户的语言
+        4．回复简短，像微信聊天一样
+        5.有需要的话可以用❤等emoji表情和颜文字
+        6.用符合伴侣性格的方式对话
+        7．回复的内容，要充分体现伴侣的性格特征
+        伴侣性格：
+            － %s
+        你必须严格遵守上述规则来回复用户。
+"""
 
 # 初始化聊天消息
 if 'messages' not in st.session_state:
     st.session_state.messages = []
+
+# 昵称
+if 'nickname' not in st.session_state:
+    st.session_state.nick_name = "宵宫"
+# 性格
+if 'description' not in st.session_state:
+    st.session_state.description = "一个活泼开朗的小女孩"
 
 # 展示聊天消息
 for message in st.session_state.messages: # {"role": "user", "content": prompt}
@@ -37,6 +57,18 @@ for message in st.session_state.messages: # {"role": "user", "content": prompt}
 client = OpenAI(
     api_key=os.environ.get('DEEPSEEK_API_KEY'),
     base_url="https://api.deepseek.com")
+
+# 侧边栏
+with st.sidebar:
+    st.subheader("Ai信息")
+    # 昵称输入框
+    nick_name = st.text_input("昵称", placeholder="请输入昵称", value=st.session_state.nick_name)
+    if nick_name:
+        st.session_state.nick_name = nick_name
+    # 性格描述输入框
+    description = st.text_area("请输入性格描述", placeholder="请输入性格描述", value=st.session_state.description)
+    if description:
+        st.session_state.description = description
 
 # 输入框
 prompt = st.chat_input("你好，我是纳兰宵宫，滴嘟滴嘟~")
@@ -52,7 +84,7 @@ if prompt: # 字符串会自动转换为布尔值，非空字符串为True
     response = client.chat.completions.create(
         model="deepseek-v4-flash",
         messages=[
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": system_prompt % (st.session_state.nick_name, st.session_state.description)},
             *st.session_state.messages
         ],
         stream=True,
