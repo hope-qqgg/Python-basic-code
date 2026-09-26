@@ -23,7 +23,7 @@ s = " Hello-Python-Hello-World "
 f = s.find("-")
 print(f)
 
-# cont() 统计指定子字符串在指定字符串出现的次数
+# count() 统计指定子字符串在指定字符串出现的次数
 c = s.count("Hello")
 print(c)
 
