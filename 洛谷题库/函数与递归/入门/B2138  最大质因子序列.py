@@ -13,6 +13,7 @@ def is_shushu(n):
             for j in range(i * i,n + 1,i):
                 arr[j] = False
     return arr[n]
+
 m, n = map(int,input().split())
 arr = []
 for i in range(m,n+1):
