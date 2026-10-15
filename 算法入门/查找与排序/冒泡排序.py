@@ -13,5 +13,6 @@ def bubble_sort(nums):
     return nums
 
 # 测试
-nums = [23,45,11,32,22,34,45,68,12,5]
-print(bubble_sort(nums))
+if __name__ == "__main__":
+    nums = [23,45,11,32,22,34,45,68,12,5]
+    print(bubble_sort(nums))

@@ -20,4 +20,5 @@ def binary_search(item):
             count += 1
             high = mid - 1
 
-binary_search(num)
+if __name__ == "__main__":
+    binary_search(num)
