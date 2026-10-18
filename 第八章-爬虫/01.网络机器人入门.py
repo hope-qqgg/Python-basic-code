@@ -1,5 +1,4 @@
 import requests
-from requests.packages import target
 
 # 定义url
 target_url = "https://www.tiobe.com/tiobe-index/"
