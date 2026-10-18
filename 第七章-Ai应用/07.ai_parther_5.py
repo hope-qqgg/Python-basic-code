@@ -1,4 +1,4 @@
-# 保存会话
+# 加载会话消息
 import streamlit as st
 import os
 from openai import OpenAI

@@ -129,23 +129,27 @@ class EduManagement:
             print("# 1.添加学生   2.修改学生  3.删除学生  4.查询指定学生    5.查询所有学生    6.退出系统 #")
             print("# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #")
             print()
-            choice = int(input("请选择要执行的操作，输入1 - 6:"))
-            match choice:
-                case 1: # 添加学生
-                    self.add_student()
-                case 2: # 修改学生
-                    self.update_student()
-                case 3: # 删除学生
-                    self.del_student()
-                case 4: # 查询指定学生
-                    self.query_student()
-                case 5: # 查询所有学生
-                    self.list_student()
-                case 6: # 退出系统
-                    print("Bye~")
-                    break
-                case _:
-                    print("输入错误！！！")
+            choice = input("请选择要执行的操作，输入1 - 6:")
+            try:
+                match choice:
+                    case '1': # 添加学生
+                        self.add_student()
+                    case '2': # 修改学生
+                        self.update_student()
+                    case '3': # 删除学生
+                        self.del_student()
+                    case '4': # 查询指定学生
+                        self.query_student()
+                    case '5': # 查询所有学生
+                        self.list_student()
+                    case '6': # 退出系统
+                        print("Bye~")
+                        break
+                    case _:
+                        print("输入错误！！！")
+            except Exception as e:
+                print("程序运行出错,错误信息：\n", e)
+
 
 # 测试
 if __name__ == "__main__":
