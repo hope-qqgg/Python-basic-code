@@ -42,6 +42,7 @@ class WenJieCar(Car, HuaweiAiDriving):
         Car.run(self)
         HuaweiAiDriving.run(self)
 
+# 测试
 if __name__ == "__main__":
     c1 = WenJieCar("BMW","X5","黑色","HOPE")
     # 注意：当一个类继承了多个类时，默认优先使用第一个父类中的同名属性或方法，可以使用类名.__mro__属性或者类名.mro()方法来查看调用顺序

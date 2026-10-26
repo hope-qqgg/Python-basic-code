@@ -28,6 +28,7 @@ class Car:
     def get_owner(self):
         return self.__owner[0] + "**"
 
+# 测试
 if __name__ == "__main__":
     car = Car("Audi","A6","黑色","HOPE")
     print(car.brand)

@@ -32,6 +32,7 @@ class FuelCar(Car):
 class ElectricCar(Car):
     pass
 
+测试
 if __name__ == "__main__":
     c1 = FuelCar("BMW","X5","黑色","HOPE")
     print(c1.brand)

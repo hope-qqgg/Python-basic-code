@@ -39,6 +39,7 @@ class ElectricCar(Car):
         print(f"{self.brand} {self.model} 正在充电...")
 
 
+# 测试
 if __name__ == "__main__":
     c1 = FuelCar("BMW","X5","黑色","HOPE")
     c1.charge()
