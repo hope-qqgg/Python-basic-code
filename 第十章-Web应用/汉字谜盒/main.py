@@ -1,3 +1,4 @@
+# 基础环境搭建
 from fastapi import FastAPI
 from starlette.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
